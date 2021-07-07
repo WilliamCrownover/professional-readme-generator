@@ -40,13 +40,26 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+function renderContributing(contribute) {
+  return `## Contributing \n`+
+    `${contribute} \n`;
+}
+
+function renderTests(tests) {
+  return `## Tests \n`+
+    `${tests} \n`;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)} \n`+
     `${renderDescription(data.description)} \n`+
     `${renderTableOfContents()} \n`+
     `${renderInstallation(data.installation)} \n`+
-    `${renderUsage(data.usage)} \n`;
+    `${renderUsage(data.usage)} \n`+
+    // License Here
+    `${renderContributing(data.contribute)} \n`+
+    `${renderTests(data.tests)} \n`;
 }
 
 module.exports = generateMarkdown;

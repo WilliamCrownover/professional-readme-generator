@@ -24,6 +24,16 @@ const questions = [
         type: "input",
         message: "How do you use this application?",
         name: "usage"
+    },
+    {
+        type: "input",
+        message: "What are the guidelines for contributing?",
+        name: "contribute"
+    },
+    {
+        type: "input",
+        message: "What are the tests for this program?",
+        name: "tests"
     }
 ];
 
