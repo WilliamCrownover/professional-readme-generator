@@ -1,11 +1,26 @@
 //FUNCTIONS
 function renderTitle(title) {
-  return `# ${title}`;
+  return `# ${title} \n`;
 }
 
 function renderDescription(description) {
   return `## Description \n`+
-    `${description}`;
+    `${description} \n`;
+}
+
+function renderTableOfContents() {
+  return `## Table of Contents \n`+
+    `* [Installation](#installation) \n`+
+    `* [Usage](#usage) \n`+
+    `* [License](#license) \n`+
+    `* [Contributing](#contributing) \n`+
+    `* [Tests](#tests) \n`+
+    `* [Questions](#questions) \n`;
+}
+
+function renderInstallation(install) {
+  return `## Installation \n`+
+    `${install}`;
 }
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -23,7 +38,9 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)} \n`+
-    `${renderDescription(data.description)}`;
+    `${renderDescription(data.description)} \n`+
+    `${renderTableOfContents()} \n`+
+    `${renderInstallation(data.installation)}`;
 }
 
 module.exports = generateMarkdown;

@@ -14,6 +14,11 @@ const questions = [
         type: "input",
         message: "Describe your project.",
         name: "description"
+    },
+    {
+        type: "input",
+        message: "How do you install the project?",
+        name: "installation"
     }
 ];
 
