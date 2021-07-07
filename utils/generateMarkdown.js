@@ -102,17 +102,24 @@ function renderTests(tests) {
     `${tests} \n`;
 }
 
+function renderQuestions(username, email) {
+  return `## Questions \n`+
+    `${username} [GitHub Profile](https://github.com/${username}) \n\n`+
+    `If you have questions please email me at ${email} \n`;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)} \n`+
-    `${renderDescription(data.description)} \n`+
     `${renderLinkedLicenseBadge(data.license)}`+
+    `${renderDescription(data.description)} \n`+
     `${renderTableOfContents(data.license)} \n`+
     `${renderInstallation(data.installation)} \n`+
     `${renderUsage(data.usage)} \n`+
     `${renderLicenseSection(data.license)}`+
     `${renderContributing(data.contribute)} \n`+
-    `${renderTests(data.tests)} \n`;
+    `${renderTests(data.tests)} \n`+
+    `${renderQuestions(data.username, data.email)} \n`;
 }
 
 module.exports = generateMarkdown;
