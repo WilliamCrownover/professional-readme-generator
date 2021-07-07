@@ -1,3 +1,13 @@
+//FUNCTIONS
+function renderTitle(title) {
+  return `# ${title}`;
+}
+
+function renderDescription(description) {
+  return `## Description \n`+
+    `${description}`;
+}
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -12,9 +22,8 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+  return `${renderTitle(data.title)} \n`+
+    `${renderDescription(data.description)}`;
 }
 
 module.exports = generateMarkdown;
