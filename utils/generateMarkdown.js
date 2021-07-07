@@ -20,7 +20,12 @@ function renderTableOfContents() {
 
 function renderInstallation(install) {
   return `## Installation \n`+
-    `${install}`;
+    `${install} \n`;
+}
+
+function renderUsage(usage) {
+  return `## Usage \n`+
+    `${usage} \n`;
 }
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -40,7 +45,8 @@ function generateMarkdown(data) {
   return `${renderTitle(data.title)} \n`+
     `${renderDescription(data.description)} \n`+
     `${renderTableOfContents()} \n`+
-    `${renderInstallation(data.installation)}`;
+    `${renderInstallation(data.installation)} \n`+
+    `${renderUsage(data.usage)} \n`;
 }
 
 module.exports = generateMarkdown;
