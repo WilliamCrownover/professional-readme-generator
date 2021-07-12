@@ -5,11 +5,11 @@ This is a node based application that asks the user a series of questions throug
 
 In building this application, I learned how to create new files locally through Node fs and how to import dependencies for my app such as Inquirer which was used for the command line interface with the user.
 
+<img src="./assets/screenshot.jpg" width="1200" alt="Example setup of README generator"/>
+
 ## Walkthrough Video
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/Vh3lNQ9EpcA" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+https://www.youtube.com/watch?v=Vh3lNQ9EpcA&ab_channel=WilliamCrownover
 
 ## Example Generated README.md
 
